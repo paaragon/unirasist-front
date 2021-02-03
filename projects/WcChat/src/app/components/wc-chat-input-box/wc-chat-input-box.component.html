@@ -1,0 +1,5 @@
+<div [class.disabled]="!inputEnabled">
+    <input type="text" [maxlength]="charMax" (keyup)="onInputChange($event)" [(ngModel)]="text" [disabled]="!inputEnabled" #input placeholder="{{placeholder}}">
+    <span id="char-counter" [class.max]="isMaxLength()">{{charCounter}} / {{charMax}}</span>
+</div>
+<button (click)="sendMessage()" [disabled]="!inputEnabled">Enviar</button>

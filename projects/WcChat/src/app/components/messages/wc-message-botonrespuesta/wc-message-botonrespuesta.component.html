@@ -1,0 +1,7 @@
+<img src="/assets/logo.png" alt="" class="logo" [class.withoutLogo]="!message.withLogo">
+<div class="wrapper" [class.withoutLogo]="!message.withLogo" *ngIf="!message.loading" [class.disabled]="!enabled">
+    <div *ngFor="let opcion of opciones" class="botonrespuesta" (click)="clickRespuesta(opcion)">{{opcion}}</div>
+</div>
+<div class="wrapper" [class.withoutLogo]="!message.withLogo" *ngIf="message.loading">
+    <img class="msgLoading"  src="/assets/loader.gif">
+</div>

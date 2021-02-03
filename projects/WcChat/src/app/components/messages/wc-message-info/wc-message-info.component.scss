@@ -1,0 +1,17 @@
+@import "../../../variables";
+@import "../message_common.scss";
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    max-width: calc(100% - #{$gap * 4});
+    border-radius: $radius;
+    min-width: 70%;
+    background-color: #fff;
+    border: 1px solid $color-info;
+    text-align: center;
+}

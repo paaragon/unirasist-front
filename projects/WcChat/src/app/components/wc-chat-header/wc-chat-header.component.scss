@@ -1,0 +1,42 @@
+@import "../../_variables";
+
+:host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $gap;
+    border-bottom: 1px solid $lightGrey;
+    height: $headerHeight;
+}
+
+div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+#logo {
+    width: 45px;
+    display: block;
+    margin-right: 5px;
+}
+
+#collapse {
+    width: 25px;
+    height: 16px;
+    background-image: url("/assets/coppalse-icon.png");
+    background-size: 100%;
+    background-position: 0 0;
+    background-position-y: -34px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    &.collapsed {
+        background-position-y: 0;
+    }
+}

@@ -1,0 +1,19 @@
+@import "../../../variables";
+
+:host {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.wrapper {
+    max-width: 70%;
+    margin: $gap;
+    border: 1px solid $lightGrey;
+    border-radius: $radius 0 $radius $radius;
+    display: inline-block;
+}
+
+p {
+    margin: 0;
+}

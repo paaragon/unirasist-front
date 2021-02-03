@@ -1,0 +1,2 @@
+<img src="/assets/logo.png" alt="" class="logo" [class.withoutLogo]="!message.withLogo">
+<div class="wrapper" [class.withoutLogo]="!message.withLogo" [innerHTML]="message.text | safeHtml"></div>

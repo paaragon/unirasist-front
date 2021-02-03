@@ -1,0 +1,16 @@
+:host {
+    overflow: scroll;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    app-wc-message-default {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}

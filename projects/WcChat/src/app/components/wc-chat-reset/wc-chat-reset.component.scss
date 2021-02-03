@@ -1,0 +1,14 @@
+@import "../../variables";
+
+p {
+    text-align: center;
+    background-color: $color-main;
+    margin: 0;
+    padding: $gap/4;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    &:hover {
+        background-color: $color-main-darken;
+    }
+}

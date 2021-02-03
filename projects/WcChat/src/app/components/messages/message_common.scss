@@ -1,0 +1,38 @@
+@import "../../variables";
+
+:host {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.wrapper {
+    max-width: 70%;
+    margin: $gap / 4;
+    background-color: $lightGrey;
+    border-radius: 0 $radius $radius $radius;
+    padding: $gap;
+    padding-bottom: $gap / 2;
+    img {
+        width: 100%;
+    }
+}
+
+p {
+    margin: 0;
+    margin-bottom: $gap / 2;
+    padding: 0;
+    color: #000;
+}
+
+img.logo {
+    width: 45px;
+    height: 45px;
+    margin-top: 0;
+    margin-right: $gap / 2;
+    margin-left: $gap;
+    &.withoutLogo {
+        visibility: hidden;
+        height: 0;
+    }
+}

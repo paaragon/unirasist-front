@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let msg of messages">
+        <app-wc-message-fromuser *ngIf="isFromUser(msg)" [message]="msg" #msgs></app-wc-message-fromuser>
+        <app-wc-message-default *ngIf="isDefault(msg)" [message]="msg" #msgs></app-wc-message-default>
+        <app-wc-message-danger *ngIf="isDanger(msg)" [message]="msg" #msgs></app-wc-message-danger>
+        <app-wc-message-warning *ngIf="isWarning(msg)" [message]="msg" #msgs></app-wc-message-warning>
+        <app-wc-message-info *ngIf="isInfo(msg)" [message]="msg" #msgs></app-wc-message-info>
+        <app-wc-message-botonrespuesta *ngIf="isBotonrespuesta(msg)" [message]="msg" #msgs (onClickRespuesta)="clickRespuesta($event)"></app-wc-message-botonrespuesta>
+    </li>
+</ul>

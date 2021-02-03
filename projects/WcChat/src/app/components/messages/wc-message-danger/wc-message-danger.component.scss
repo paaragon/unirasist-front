@@ -1,0 +1,9 @@
+@import "../../../variables";
+@import "../message_common.scss";
+
+.wrapper {
+    background-color: $color-error;
+    p {
+        color: #fff;
+    }
+}

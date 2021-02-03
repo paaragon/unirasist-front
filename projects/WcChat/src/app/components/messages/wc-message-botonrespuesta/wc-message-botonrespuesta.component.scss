@@ -1,0 +1,41 @@
+@import "../../../variables";
+@import "../message_common.scss";
+
+.wrapper {
+    img.msgLoading {
+        width: 32px;
+        margin-bottom: $gap / 2;
+        display: block;
+    }
+    flex-grow: 1;
+    max-width: calc(70% + #{$gap * 2 - 2px}) !important;
+    text-align: center;
+    background-color: $color-main !important;
+    border: 2px solid darken($color-main, 10%);
+    padding: 0 !important;
+    border-radius: $radius !important;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    &.disabled {
+        background-color: $grey !important;
+        border: 2px solid darken(grey, 10%);
+        cursor: default;
+        &:hover {
+            background-color: $grey !important;
+            border: 2px solid darken(grey, 10%);
+        }
+        & > .botonrespuesta {
+            &:hover {
+                background-color: $grey !important;
+            }
+        }
+    }
+    & > .botonrespuesta {
+        padding: $gap/2 $gap;
+        width: 100%;
+        &:hover {
+            background-color: darken($color-main, 10%) !important;
+        }
+    }
+}

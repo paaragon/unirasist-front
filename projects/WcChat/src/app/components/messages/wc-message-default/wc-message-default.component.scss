@@ -1,0 +1,53 @@
+@import "../../../variables";
+@import "../message_common.scss";
+
+.wrapper {
+    img.msgLoading {
+        width: 32px;
+        margin-bottom: $gap / 2;
+        display: block;
+    }
+    header {
+        font-weight: bold;
+        border-bottom: 1px solid $grey;
+        padding-bottom: $gap / 2;
+        margin-bottom: $gap;
+        margin-top: $gap;
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    ul {
+        padding: 0 $gap;
+    }
+
+    span.badge {
+        background-color: $grey;
+        color: #fff;
+        border-radius: 50%;
+        padding: $gap / 4;
+        height: $gap;
+        width: $gap;
+        line-height: $gap;
+        display: inline-block;
+        text-align: center;
+        margin: 0 $gap / 2;
+        &.danger {
+            background-color: $color-error;
+        }
+        &.warning {
+            background-color: $color-warning;
+        }
+        &.info {
+            background-color: $color-info;
+        }
+    }
+
+    a {
+        color: $color-main;
+        &:hover {
+            color: $color-main-darken;
+        }
+    }
+}

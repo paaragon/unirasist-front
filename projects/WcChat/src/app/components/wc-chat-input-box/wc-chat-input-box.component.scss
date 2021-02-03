@@ -1,0 +1,86 @@
+@import "../../variables";
+
+:host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $gap;
+    border-top: 1px solid $lightGrey;
+}
+
+div {
+    position: relative;
+    width: 100%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: $gap / 2;
+    padding-left: $gap / 2;
+    border-radius: $radius;
+    border: 1px solid $grey;
+    input {
+        display: block;
+        outline: none;
+        border: none;
+        background: transparent;
+        width: 100%;
+        padding-top: $gap / 2;
+        padding-bottom: $gap / 2;
+        &:disabled {
+            background-color: $lightGrey2;
+            cursor: not-allowed;
+        }
+    }
+
+    #char-counter {
+        display: block;
+        font-size: 0.8rem;
+        color: $color-main;
+        text-align: right;
+        min-width: 50px;
+        &.max {
+            color: $color-error;
+            animation-duration: 0.7s;
+            animation-name: errorFocus;
+        }
+    }
+    &.disabled {
+        background-color: $lightGrey2;
+        cursor: not-allowed;
+    }
+}
+
+button {
+    display: block;
+    margin-left: $gap;
+    padding: $gap / 2;
+    background-color: $color-main;
+    border: 1px solid $color-main-darken;
+    outline: none;
+    border-radius: $radius;
+    color: #fff;
+    cursor: pointer;
+    &:disabled {
+        background-color: $grey;
+        cursor: not-allowed;
+        border: 1px solid $grey;
+    }
+    &:hover {
+        background-color: $color-main-darken;
+    }
+}
+
+@keyframes errorFocus {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.1) translateX(-5px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
