@@ -8,7 +8,7 @@
         display: block;
     }
     header {
-        font-weight: bold;
+        font-weight: normal;
         border-bottom: 1px solid $grey;
         padding-bottom: $gap / 2;
         margin-bottom: $gap;
@@ -20,6 +20,15 @@
 
     ul {
         padding: 0 $gap;
+    }
+
+    span.enlacerespuesta {
+        color: $color-main !important;
+        text-decoration: underline;
+        cursor: pointer;
+        &:hover {
+            color: $color-main-darken;
+        }
     }
 
     span.badge {
@@ -48,6 +57,16 @@
         color: $color-main;
         &:hover {
             color: $color-main-darken;
+        }
+    }
+
+    h4 {
+        font-weight: normal;
+        margin-top: 0;
+        font-size: 1.1rem;
+        strong {
+            font-size: 1.2rem;
+            font-weight: bold;
         }
     }
 }

@@ -28,8 +28,7 @@
               "projects/WcChat/src/assets"
             ],
             "styles": [
-              "projects/WcChat/src/styles.scss",
-              "projects/WcChat/src/components.scss"
+              "projects/WcChat/src/styles.scss"
             ],
             "scripts": []
           },

@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, Input, ViewChild, ElementRef, OnChanges } from '@angular/core';
 import { Message } from '../../models/Message';
 import { MessageSender } from '../../models/MessageSender';
+import {makeid} from '../../global';
 
 @Component({
   selector: 'app-wc-chat-input-box',
@@ -28,7 +29,6 @@ export class WcChatInputBoxComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    console.log('this.inputEnabled', this.inputEnabled);
     setTimeout(() => this.setInputDisabled(), 0);
   }
 
@@ -57,6 +57,7 @@ export class WcChatInputBoxComponent implements OnInit, OnChanges {
     }
 
     const msg: Message = {
+      htmlId: makeid(6),
       date: new Date(),
       from: MessageSender.FROM_USER,
       text: textClean,

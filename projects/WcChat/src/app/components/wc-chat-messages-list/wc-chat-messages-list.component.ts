@@ -83,7 +83,6 @@ export class WcChatMessagesListComponent implements OnInit {
   private getTargetScrollTop(): number {
     const scrollToEl: any = this.getNextScrollMsg();
     if (scrollToEl) {
-      console.log(scrollToEl.offsetTop, this.element.scrollHeight - 100);
       return scrollToEl.offsetTop - 100;
     } else {
       return this.element.scrollHeight + 100;

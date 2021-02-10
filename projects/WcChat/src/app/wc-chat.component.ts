@@ -4,6 +4,7 @@ import { Message } from './models/Message';
 import { MessageResponse } from './models/MessageResponse';
 import { ChatService } from './services/chat.service';
 import { Context } from './models/Context';
+import { makeid } from './global';
 
 @Component({
   selector: 'wc-chat',
@@ -36,7 +37,6 @@ export class WcChatComponent {
     this.collapsed = !this.collapsed;
     this.inputEnabled = !this.collapsed;
     if (this.pristineConversation) {
-      console.log('this.userId', this.userId);
       this.startConversation();
     }
     this.pristineConversation = false;
@@ -48,12 +48,12 @@ export class WcChatComponent {
   }
 
   resetConversation() {
-    console.log('reiniciar conversacion');
     this.startConversation();
   }
 
   clickRespuesta(messageText: string) {
     const newMessage: Message = {
+      htmlId: makeid(6),
       date: new Date(),
       from: MessageSender.FROM_USER,
       level: 'default',
@@ -96,6 +96,7 @@ export class WcChatComponent {
 
   private getErrorMessage(e: any): Message {
     return {
+      htmlId: makeid(6),
       date: new Date(),
       from: MessageSender.FROM_SYSTEM,
       level: 'error',
@@ -106,6 +107,7 @@ export class WcChatComponent {
   private clasifyResponse(response: MessageResponse): Message[] {
     if (response && response.output && response.output) {
       return response.output.map((m, idx) => ({
+        htmlId: makeid(6),
         date: new Date(),
         from: MessageSender.FROM_BOT,
         level: m.level,
@@ -119,6 +121,7 @@ export class WcChatComponent {
 
   private getFirstMsg(): Message {
     return {
+      htmlId: makeid(6),
       date: new Date(),
       from: MessageSender.FROM_USER,
       level: 'default',
@@ -129,6 +132,7 @@ export class WcChatComponent {
 
   private getLoadingMsg(): Message {
     return {
+      htmlId: makeid(6),
       date: new Date(),
       from: MessageSender.FROM_BOT,
       level: 'default',

@@ -1,6 +1,7 @@
 import { MessageSender } from "./MessageSender";
 
 export interface Message {
+    htmlId: string;
     text: string;
     date: Date;
     from: MessageSender;

@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, ViewEncapsulation, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, ElementRef, Output, EventEmitter } from '@angular/core';
 import { Message } from '../../../models/Message';
+import enlacerespuestaEvt from './subevents/enlacerespuesta.evt';
 
 @Component({
   selector: 'app-wc-message-default',
@@ -11,6 +12,9 @@ export class WcMessageDefaultComponent implements OnInit {
 
   @Input() message: Message;
 
+  @Output() onMessage: EventEmitter<string> = new EventEmitter<string>();
+  onMessageEnabled = true;
+
   element: any;
   constructor(
     element: ElementRef
@@ -19,6 +23,10 @@ export class WcMessageDefaultComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    setTimeout(() => this.bindEvents());
   }
 
+  bindEvents() {
+    enlacerespuestaEvt.bindEvent(this.message, this.onMessage, this.onMessageEnabled);
+  }
 }
